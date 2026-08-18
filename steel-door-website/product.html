@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IRONOVA — Product Details</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+
+<header class="product-header">
+
+    <a href="index.html" class="brand">
+        IRON<span>OVA.</span>
+    </a>
+
+    <div class="product-header-right">
+
+        <a href="index.html#collections" class="back-link">
+            ← BACK TO COLLECTIONS
+        </a>
+
+        <button class="cart-btn" id="cartBtn">
+            CART <span id="cartCount">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="product-details">
+
+        <!-- LEFT IMAGE -->
+
+        <div class="product-visual">
+
+            <div class="product-main-image" id="productImage"></div>
+
+            <div class="image-label">
+                <span id="productCategory">STEEL DOORS</span>
+                <span>IRONOVA SYSTEM</span>
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT INFORMATION -->
+
+        <div class="product-information">
+
+            <p class="eyebrow" id="productSeries">
+                STEEL DOORS · PIVOT SERIES
+            </p>
+
+            <h1 id="productName">
+                MERIDIAN PIVOT
+            </h1>
+
+            <div class="price" id="productPrice">
+                FROM ₹2,85,000
+            </div>
+
+            <p class="product-description" id="productDescription">
+                A refined architectural steel pivot door designed for
+                bold entrances, slim sightlines and long-term performance.
+            </p>
+
+
+            <!-- SPECIFICATIONS -->
+
+            <div class="specifications">
+
+                <div class="spec-row">
+
+                    <div>
+                        <span>DIMENSIONS</span>
+                        <strong id="productDimensions">
+                            900 × 2100 mm
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>FRAME</span>
+                        <strong id="productFrame">
+                            50 × 100 mm
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <!-- FINISH -->
+
+                <div class="option-group">
+
+                    <label for="finishSelect">
+                        FINISH
+                    </label>
+
+                    <select id="finishSelect">
+
+                        <option value="Matte Black">
+                            Matte Black
+                        </option>
+
+                        <option value="Graphite Grey">
+                            Graphite Grey
+                        </option>
+
+                        <option value="Warm Bronze">
+                            Warm Bronze
+                        </option>
+
+                        <option value="Natural Steel">
+                            Natural Steel
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- GLASS -->
+
+                <div class="option-group">
+
+                    <label for="glassSelect">
+                        GLASS
+                    </label>
+
+                    <select id="glassSelect">
+
+                        <option value="8 mm Toughened">
+                            8 mm Toughened
+                        </option>
+
+                        <option value="10 mm Toughened">
+                            10 mm Toughened
+                        </option>
+
+                        <option value="Laminated">
+                            Laminated
+                        </option>
+
+                        <option value="Double Glazed">
+                            Double Glazed
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUANTITY -->
+
+            <div class="quantity-section">
+
+                <span>QUANTITY</span>
+
+                <div class="quantity-control">
+
+                    <button id="minusBtn">−</button>
+
+                    <strong id="quantity">1</strong>
+
+                    <button id="plusBtn">+</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTIONS -->
+
+            <div class="product-actions">
+
+                <button class="add-cart-btn" id="addCartBtn">
+                    ADD TO CART
+                </button>
+
+                <button class="quote-product-btn" id="quoteProductBtn">
+                    REQUEST A QUOTE ↗
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT NOTE -->
+
+            <div class="product-note">
+
+                <span>IRONOVA STANDARD</span>
+
+                <p>
+                    Made to measure. Fabricated under one roof.
+                    Installation available across selected locations.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCT INFORMATION -->
+
+    <section class="product-bottom">
+
+        <div>
+
+            <p class="eyebrow">
+                PRODUCT DETAILS
+            </p>
+
+            <h2>
+                BUILT FOR<br>
+                <span>ARCHITECTURE.</span>
+            </h2>
+
+        </div>
+
+        <div class="bottom-copy">
+
+            <p id="bottomDescription">
+                Every IRONOVA system is designed around the opening,
+                combining structural steel with carefully selected
+                glass, finish and hardware.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- CART SIDEBAR -->
+
+<div class="cart-overlay" id="cartOverlay">
+
+    <div class="cart-panel">
+
+        <button class="cart-close" id="cartClose">
+            ×
+        </button>
+
+        <p class="eyebrow">
+            YOUR SELECTION
+        </p>
+
+        <h2>
+            CART.
+        </h2>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-total">
+
+            <span>TOTAL</span>
+
+            <strong id="cartTotal">
+                ₹0
+            </strong>
+
+        </div>
+
+        <button class="checkout-btn">
+            PROCEED WITH ENQUIRY ↗
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="product.js"></script>
+
+</body>
+</html>
