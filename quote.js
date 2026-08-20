@@ -132,108 +132,69 @@ document.getElementById(
    FORM SUBMISSION
 ========================================================= */
 
-const quoteForm =
-    document.getElementById("quoteForm");
+quoteForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
 
+    const formData = {
+        product: product.name,
 
-const successOverlay =
-    document.getElementById("successOverlay");
+        name: document.getElementById("fullName").value,
+        phone: document.getElementById("phone").value,
+        email: document.getElementById("email").value,
 
+        location: document.getElementById("location").value,
+        projectType: document.getElementById("projectType").value,
+        quantity: document.getElementById("quantity").value,
 
-quoteForm.addEventListener(
-    "submit",
-    function (event) {
+        finish: document.getElementById("finish").value,
+        glass: document.getElementById("glass").value,
+        width: document.getElementById("width").value,
+        height: document.getElementById("height").value,
 
-        event.preventDefault();
+        message: document.getElementById("message").value
+    };
 
+    try {
+        const response = await fetch("http://localhost:5000/api/quote", {
+            method: "POST",
 
-        /*
-         * Collect form data
-         */
+            headers: {
+                "Content-Type": "application/json"
+            },
 
-        const formData = {
+            body: JSON.stringify(formData)
+        });
 
-            product: product.name,
+        const result = await response.json();
 
-            name:
-                document.getElementById(
-                    "fullName"
-                ).value,
+        if (result.success) {
 
-            phone:
-                document.getElementById(
-                    "phone"
-                ).value,
+            // Save locally as backup
+            localStorage.setItem(
+                "ironovaLastQuote",
+                JSON.stringify(formData)
+            );
 
-            email:
-                document.getElementById(
-                    "email"
-                ).value,
+            // Show success message
+            successOverlay.classList.add("show");
+            document.body.style.overflow = "hidden";
 
-            location:
-                document.getElementById(
-                    "location"
-                ).value,
+            // Clear form
+            quoteForm.reset();
 
-            projectType:
-                document.getElementById(
-                    "projectType"
-                ).value,
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
 
-            quantity:
-                document.getElementById(
-                    "quantity"
-                ).value,
+    } catch (error) {
 
-            finish:
-                document.getElementById(
-                    "finish"
-                ).value,
+        console.error("Quote submission error:", error);
 
-            glass:
-                document.getElementById(
-                    "glass"
-                ).value,
-
-            width:
-                document.getElementById(
-                    "width"
-                ).value,
-
-            height:
-                document.getElementById(
-                    "height"
-                ).value,
-
-            message:
-                document.getElementById(
-                    "message"
-                ).value
-
-        };
-
-
-        /*
-         * Save enquiry locally for now.
-         */
-
-        localStorage.setItem(
-            "ironovaLastQuote",
-            JSON.stringify(formData)
+        alert(
+            "Unable to connect to the server. Please make sure the backend is running."
         );
-
-
-        /*
-         * Show success message.
-         */
-
-        successOverlay.classList.add("show");
-
-        document.body.style.overflow =
-            "hidden";
-
     }
-);
+});
 
 
 
