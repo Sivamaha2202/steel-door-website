@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>IRONOVA — Request a Quote</title>
+
+    <link rel="stylesheet" href="quote.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="quote-header">
+
+    <a href="index.html" class="brand">
+        IRON<span>O</span>VA
+    </a>
+
+
+    <a href="index.html" class="back-home">
+        ← BACK TO HOME
+    </a>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN QUOTE PAGE
+===================================================== -->
+
+<main class="quote-page">
+
+
+    <!-- LEFT SIDE -->
+
+    <section class="quote-intro">
+
+        <div class="eyebrow">
+            PROJECT ENQUIRY
+        </div>
+
+
+        <h1>
+            LET'S BUILD
+            <span>YOUR VISION.</span>
+        </h1>
+
+
+        <p>
+            Tell us about your project and our team will
+            get back to you with a tailored quotation,
+            recommendations and next steps.
+        </p>
+
+
+        <!-- SELECTED PRODUCT -->
+
+        <div class="selected-product">
+
+            <div class="selected-product-image"
+                 id="selectedProductImage">
+            </div>
+
+
+            <div class="selected-product-info">
+
+                <div class="product-label">
+                    SELECTED PRODUCT
+                </div>
+
+
+                <h2 id="selectedProductName">
+                    MERIDIAN PIVOT
+                </h2>
+
+
+                <p id="selectedProductCategory">
+                    STEEL DOORS
+                </p>
+
+
+                <strong id="selectedProductPrice">
+                    FROM ₹2,85,000
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTACT INFO -->
+
+        <div class="contact-info">
+
+            <div>
+
+                <span>
+                    EMAIL
+                </span>
+
+                <p>
+                    hello@ironova.in
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    PHONE
+                </span>
+
+                <p>
+                    +91 98765 43210
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- RIGHT SIDE -->
+
+    <section class="quote-form-section">
+
+
+        <form id="quoteForm">
+
+
+            <!-- PERSONAL DETAILS -->
+
+            <div class="form-section">
+
+                <div class="form-number">
+                    01
+                </div>
+
+                <div class="form-title">
+                    YOUR DETAILS
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label>
+                        FULL NAME *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        PHONE NUMBER *
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+91 XXXXX XXXXX"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label>
+                        EMAIL ADDRESS *
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="your@email.com"
+                        required
+                    >
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- PROJECT DETAILS -->
+
+            <div class="form-section">
+
+                <div class="form-number">
+                    02
+                </div>
+
+                <div class="form-title">
+                    PROJECT DETAILS
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group full">
+
+                    <label>
+                        PROJECT LOCATION *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        name="location"
+                        placeholder="City / Location"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        PROJECT TYPE
+                    </label>
+
+                    <select id="projectType"
+                            name="projectType">
+
+                        <option value="">
+                            Select project type
+                        </option>
+
+                        <option value="Residential">
+                            Residential
+                        </option>
+
+                        <option value="Commercial">
+                            Commercial
+                        </option>
+
+                        <option value="Villa">
+                            Villa
+                        </option>
+
+                        <option value="Apartment">
+                            Apartment
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        QUANTITY
+                    </label>
+
+                    <input
+                        type="number"
+                        id="quantity"
+                        name="quantity"
+                        value="1"
+                        min="1"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- PRODUCT SPECIFICATIONS -->
+
+            <div class="form-section">
+
+                <div class="form-number">
+                    03
+                </div>
+
+                <div class="form-title">
+                    PRODUCT SPECIFICATIONS
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label>
+                        FINISH
+                    </label>
+
+                    <select id="finish"
+                            name="finish">
+
+                        <option value="">
+                            Select finish
+                        </option>
+
+                        <option value="Matte Black">
+                            Matte Black
+                        </option>
+
+                        <option value="Charcoal Grey">
+                            Charcoal Grey
+                        </option>
+
+                        <option value="Graphite">
+                            Graphite
+                        </option>
+
+                        <option value="Custom Finish">
+                            Custom Finish
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        GLASS
+                    </label>
+
+                    <select id="glass"
+                            name="glass">
+
+                        <option value="">
+                            Select glass
+                        </option>
+
+                        <option value="Clear Glass">
+                            Clear Glass
+                        </option>
+
+                        <option value="Frosted Glass">
+                            Frosted Glass
+                        </option>
+
+                        <option value="Tinted Glass">
+                            Tinted Glass
+                        </option>
+
+                        <option value="Double Glazed">
+                            Double Glazed
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        WIDTH
+                    </label>
+
+                    <input
+                        type="text"
+                        id="width"
+                        name="width"
+                        placeholder="e.g. 1000 mm"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        HEIGHT
+                    </label>
+
+                    <input
+                        type="text"
+                        id="height"
+                        name="height"
+                        placeholder="e.g. 2100 mm"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- MESSAGE -->
+
+            <div class="form-section">
+
+                <div class="form-number">
+                    04
+                </div>
+
+                <div class="form-title">
+                    TELL US MORE
+                </div>
+
+            </div>
+
+
+            <div class="form-group full">
+
+                <label>
+                    PROJECT REQUIREMENTS
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="Tell us about your project, number of openings, preferred timeline, special requirements..."
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- SUBMIT -->
+
+            <div class="submit-area">
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+
+                    SEND QUOTE REQUEST
+
+                    <span>↗</span>
+
+                </button>
+
+
+                <p>
+                    By submitting this form, you agree
+                    to be contacted by the IRONOVA team
+                    regarding your enquiry.
+                </p>
+
+            </div>
+
+
+        </form>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     SUCCESS MESSAGE
+===================================================== -->
+
+<div class="success-overlay"
+     id="successOverlay">
+
+    <div class="success-box">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <div class="eyebrow">
+            ENQUIRY RECEIVED
+        </div>
+
+        <h2>
+            THANK <span>YOU.</span>
+        </h2>
+
+        <p>
+            Your project enquiry has been received.
+            Our team will contact you shortly.
+        </p>
+
+        <button
+            id="successClose"
+            class="success-btn"
+        >
+            BACK TO HOME
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<script src="quote.js"></script>
+
+</body>
+
+</html>
